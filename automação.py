@@ -1,20 +1,20 @@
 import pandas as pd
 
-# MODO MAIS TRABALHOSO
 
-# Lê o arquivo Excel do setor comercial
-# despesas_comerciais = pd.read_excel('Setor_Control.xlsx')
-# despesas_comerciais['Setor'] = 'Control'
 
-# Lê o arquivo Excel do setor financeiro
-# despesas_financeiro = pd.read_excel('Setor_Financeiro.xlsx')
-# despesas_financeiro['Setor'] = 'Financeiro'
+despesas_comerciais = pd.read_excel('Setor_Control.xlsx')
+despesas_comerciais['Setor'] = 'Control'
 
-# Concatena os DataFrames e redefine os índices
-# despesas_agregadas = pd.concat([despesas_comerciais, despesas_financeiro], ignore_index=True)
+despesas_financeiro = pd.read_excel('Setor_Financeiro.xlsx')
+despesas_financeiro['Setor'] = 'Financeiro'
 
-# Imprime o DataFrame agregado
-# print(despesas_agregadas)
+despesas_agregadas = pd.concat([despesas_comerciais, despesas_financeiro], ignore_index=True)
+
+print(despesas_agregadas) 
+
+
+# Dois blocos de códigos diferentes relacionados a junção de duas ou mais planilhas.
+
 
 areas = ['Control', 'Financeiro', 'RH', 'T.I']
 despesas_total = pd.DataFrame()
